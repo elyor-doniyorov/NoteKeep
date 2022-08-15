@@ -1,4 +1,3 @@
-import './App.css';
 import Header from './components/Header';
 import UserInput from './components/UserInput';
 import { useState, useEffect } from 'react';
@@ -45,7 +44,7 @@ function App() {
 
 
   return (
-    <div>
+    <div className='container w-4/6 font-sans mx-auto my-5 bg-#3AAFA9 rounded-l-lg'>
       <Header />
       <UserInput onAdd={addNote} />
       <NotesList notes={currentNotes} handleDeleteNote={deleteNotes} handleAddNote={addNote} />

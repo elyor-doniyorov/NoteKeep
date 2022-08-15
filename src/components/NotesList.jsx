@@ -1,13 +1,12 @@
 import React from 'react';
 import Note from './Note';
-import './NotesList.css';
 
 function NotesList({
 	notes,
 	handleDeleteNote,
 }) {
   return (
-    <div className='notesInGrid'>
+    <div className='grid grid-rows-2 grid-flow-col justify-center gap-1 mt-5'>
       {notes.map((note,index) => (
         <Note 
           key={index} 

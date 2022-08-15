@@ -1,12 +1,11 @@
 import React from 'react';
-import './Header.css';
+import logo from './logo.png';
 
 function Header(props) {
-  const logo = <img src='https://www.gstatic.com/images/branding/product/1x/keep_2020q4_48dp.png' alt='logo' />
   return (
-    <div className='header'>
-      {logo}
-      <h3>NoteK</h3>
+    <div className='flex justify-start ml-3'>
+      <img className='w-10 decoration-white' src={logo} alt='logo' />
+      <h3 className="text-2xl font-mono font-semibold my-auto text-#DEF2F1">NoteK</h3>
     </div>
   );
 }

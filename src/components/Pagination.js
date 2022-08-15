@@ -1,5 +1,4 @@
 import React from 'react';
-import './Pagination.css';
 
 export const Pagination = ({ notesPerPage, totalNotes, paginate }) => {
   const pageNumbers = [];
@@ -9,10 +8,10 @@ export const Pagination = ({ notesPerPage, totalNotes, paginate }) => {
   }
   return (
     <div>
-      <ul className='pagination'>
+      <ul className='flex justify-center p-3 m-3'>
         {pageNumbers.map(number => (
-          <li key={number} className='pageNote'>
-            <a href='!#' onClick={() => paginate(number)} className='pageLink'>
+          <li key={number} className='px-1 border rounded mx-1'>
+            <a href='!#' onClick={() => paginate(number)} className='text-#DEF2F1'>
               <p>{number}</p>
             </a>
           </li>

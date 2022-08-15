@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './UserInput.css'
 
 function UserInput({onAdd}) {
   const [isExpanded, setExpanded] = useState(false);
@@ -36,21 +35,25 @@ function UserInput({onAdd}) {
   }
   return (
     <div>
-      <form>
+      <form className='relative w-96 m-auto p-4 rounded-lg bg-#FEFFFF shadow-2xl'>
         {isExpanded && (
           <>
         <input 
+          className='w-full text-sm border-none outline-none p-1 mb-2 tracking-wide'
           type="text" 
           placeholder='Title' 
           name='title'
+          maxLength={15}
           value={note.title} 
           onChange={handleChange}
         />
          <br />
         <input 
+          className='w-full text-sm border-none outline-none p-1 mb-2 tracking-wide'
           type="text" 
           placeholder='Tagline' 
           name='tagline' 
+          maxLength={20}
           value={note.tagline}
           onChange={handleChange}
         />
@@ -58,6 +61,7 @@ function UserInput({onAdd}) {
         )}
         <p>
           <textarea 
+            className='w-full text-sm border-none outline-none resize-none p-1 tracking-wide'
             name="content" 
             placeholder='Take a note...'
             value={note.content}
@@ -66,7 +70,7 @@ function UserInput({onAdd}) {
             rows={isExpanded ? 3 : 1}
           ></textarea>
         </p>
-        <button type="submit" id='sbtn' onClick={submitButton}>Submit</button>
+        <button className='absolute rounded-full font-mono outline-none italic box-border bg-#17252A text-#DEF2F1 m-1 px-3 py-1 text-xs bottom-0 right-2 border-transparent overflow-hidden tracking-wide' type="submit" id='sbtn' onClick={submitButton}>Submit</button>
       </form>
     </div>
   );
