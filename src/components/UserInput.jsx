@@ -35,7 +35,7 @@ function UserInput({onAdd}) {
   }
   return (
     <div>
-      <form className='relative w-96 m-auto p-4 rounded-lg bg-#FEFFFF shadow-2xl'>
+      <form className='relative w-40 sm:w-48 md:w-72 lg:w-80 xl:w-96 2xl:w-96 mx-auto my-3 p-4 rounded-lg bg-#FEFFFF shadow-2xl'>
         {isExpanded && (
           <>
         <input 
@@ -65,6 +65,7 @@ function UserInput({onAdd}) {
             name="content" 
             placeholder='Take a note...'
             value={note.content}
+            maxLength={25}
             onChange={handleChange}
             onClick={handleExpanded}
             rows={isExpanded ? 3 : 1}

@@ -6,7 +6,7 @@ function NotesList({
 	handleDeleteNote,
 }) {
   return (
-    <div className='grid grid-rows-2 grid-flow-col justify-center gap-1 mt-5'>
+    <div className='grid grid-rows-6 md:grid-rows-3 sm:grid-rows-3 grid-flow-col justify-center gap-1 mt-5'>
       {notes.map((note,index) => (
         <Note 
           key={index} 
